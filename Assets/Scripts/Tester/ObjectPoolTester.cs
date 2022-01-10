@@ -19,14 +19,7 @@ public class ObjectPoolTester : MonoBehaviour
     {
         _pooler = new ClassPooler<GameObject>
             (
-                (_prefab.name, 100, () =>
-                    {
-                        Vector3 spawnPos = transform.position;
-                        spawnPos.x += Random.Range(-5f, 5f);
-                        spawnPos.z += Random.Range(-5f, 5f);
-                        return Instantiate(_prefab, spawnPos, Quaternion.identity, transform);
-                    }
-                )
+                (_prefab.name, 10, () => Instantiate(_prefab, transform))
             );
     }
 
@@ -38,8 +31,13 @@ public class ObjectPoolTester : MonoBehaviour
         if(_spawnCounter >= _spawnDelay)
         {
             _spawnCounter = 0f;
+
+            Vector3 spawnPos = transform.position;
+            spawnPos.x += Random.Range(-5f, 5f);
+            spawnPos.z += Random.Range(-5f, 5f);
+
             Instance i = _pooler.GetFromPool<GameObject>(_prefab.name).GetComponent<Instance>();
-            i.Init(_pooler, _spawnedObjs);
+            i.Init(_pooler, spawnPos, _spawnedObjs);
             _spawnedObjs.Add(i);
 
         }

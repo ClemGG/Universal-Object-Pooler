@@ -417,7 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <_prefab>k__BackingField: {fileID: 2574569274579361966, guid: aee26d88dbfe1bb4682bd8cbda724f28, type: 3}
-  <_spawnDelay>k__BackingField: 0.03
+  <_spawnDelay>k__BackingField: 0.017
 --- !u!4 &1507119692
 Transform:
   m_ObjectHideFlags: 0
