@@ -24,11 +24,11 @@ public class Instance : MonoBehaviour, IPooled
         {
             _pooler = pooler;
             _spawnPos = spawnPos;
+            transform.position = _spawnPos;
             name = name.Replace("(Clone)", null);
             _spawnedObjs = spawnedObjs;
         }
 
-        transform.position = _spawnPos;
     }
 
     public void UpdateMe()

@@ -19,7 +19,7 @@ public class ObjectPoolTester : MonoBehaviour
     {
         _pooler = new ClassPooler<GameObject>
             (
-                (_prefab.name, 10, () => Instantiate(_prefab, transform))
+                (_prefab.name, 100, () => Instantiate(_prefab, transform))
             );
     }
 
