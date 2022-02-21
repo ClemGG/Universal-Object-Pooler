@@ -1,12 +1,10 @@
 {
-    "name": "Project.Pooling",
+    "name": "Project.Tester.Pooling",
     "rootNamespace": "",
-    "references": [],
-    "includePlatforms": [
-        "Editor",
-        "WindowsStandalone32",
-        "WindowsStandalone64"
+    "references": [
+        "GUID:28e56e16b0db37b4c84c2b044a0ba440"
     ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
